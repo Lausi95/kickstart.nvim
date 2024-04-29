@@ -12,10 +12,14 @@ return {
 		Color.new("cc", "#222222")
 		Color.new("sl", "#111111")
 
+		Color.new("normal", "#000000")
+		Color.new("normalText", "#AAAAAA")
+
 		local colors = colorbuddy.colors
 		local styles = colorbuddy.styles
 
 		local Group = colorbuddy.Group
+		Group.new("Normal", colors.normalText, colors.normal)
 		Group.new("Title", colors.orange:light(), nil, styles.italic)
 		Group.new("GitSignsChange", colors.orange:light())
 		Group.new("ColorColumn", nil, colors.cc)
