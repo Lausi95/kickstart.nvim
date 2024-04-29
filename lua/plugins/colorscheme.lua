@@ -11,15 +11,18 @@ return {
 		Color.new("ln", "#333333")
 		Color.new("cc", "#222222")
 		Color.new("sl", "#111111")
-		local c = colorbuddy.colors
+
+		local colors = colorbuddy.colors
+		local styles = colorbuddy.styles
 
 		local Group = colorbuddy.Group
-		Group.new("GitSignsChange", c.orange:light())
-		Group.new("ColorColumn", nil, c.cc)
-		Group.new("StatusLine", c.cc, c.sl)
-		Group.new("EndOfBuffer", c.cc, nil)
-		Group.new("LineNrAbove", c.ln, nil)
-		Group.new("LineNrBelow", c.ln, nil)
-		Group.new("LineNr", c.orange:light(), nil)
+		Group.new("Title", colors.orange:light(), nil, styles.italic)
+		Group.new("GitSignsChange", colors.orange:light())
+		Group.new("ColorColumn", nil, colors.cc)
+		Group.new("StatusLine", colors.cc, colors.sl)
+		Group.new("EndOfBuffer", colors.cc, nil)
+		Group.new("LineNrAbove", colors.ln, nil)
+		Group.new("LineNrBelow", colors.ln, nil)
+		Group.new("LineNr", colors.orange:light(), nil)
 	end,
 }
