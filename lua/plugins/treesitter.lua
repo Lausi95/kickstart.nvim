@@ -20,6 +20,8 @@ return {
 			},
 
 			ensure_installed = {
+				"java",
+				"kotlin",
 				"json",
 				"javascript",
 				"typescript",
